@@ -94,6 +94,40 @@ Reconciliation
 POST /api/reconcile/:jobId
 GET  /api/results/:jobId
 
+
+📡 API Documentation
+
+This project includes a complete Postman collection for testing and exploring all backend APIs.
+
+📂 Location
+api-docs/Smart-Reconciliation-APIs.postman_collection.json
+
+📥 How to use
+
+Open Postman
+
+Click Import
+
+Select the Postman collection file from api-docs folder
+
+Set Authorization token after login
+
+Test all available APIs
+
+📌 Covered APIs
+
+Authentication (Login/Register)
+
+CSV Upload & Column Mapping
+
+Upload Job History
+
+Reconciliation Results
+
+Dashboard Analytics
+
+Audit Trail
+
 Dashboard
 GET /api/dashboard/stats
 
