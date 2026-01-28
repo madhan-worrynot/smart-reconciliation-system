@@ -1,0 +1,74 @@
+.jobs-box {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  overflow-x: auto;
+}
+
+.jobs-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Wrapper avoids squeeze */
+
+.jobs-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Table */
+
+.jobs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 500px;   /* prevents squishing */
+}
+
+.jobs-table th {
+  background: #f3f4f6;
+  text-align: left;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.jobs-table td {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.jobs-table tr:hover {
+  background: #f9fafb;
+}
+
+/* Action column */
+
+.action-col {
+  width: 90px;
+  text-align: center;
+}
+
+/* Status */
+
+.job-status.completed { color: green; font-weight: 600; }
+.job-status.processing { color: orange; font-weight: 600; }
+
+/* Button */
+
+.view-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.view-btn:hover {
+  background: #1d4ed8;
+}
