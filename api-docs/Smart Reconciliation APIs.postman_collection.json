@@ -1,0 +1,164 @@
+{
+  "info": {
+    "_postman_id": "596b163f-4735-48fc-9c45-634d0f81ba45",
+    "name": "Smart Reconciliation APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51900879",
+    "_collection_link": "https://go.postman.co/collection/51900879-596b163f-4735-48fc-9c45-634d0f81ba45?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"madhan@test.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload CSV",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Nzg4OGFiNzUzODRmZTExZmQxY2RiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2OTYxODMyNSwiZXhwIjoxNzY5NzA0NzI1fQ.k0e1IZ3MGzEwP0l1F_2M7O_YsIMIkAlLHuPyc5N0MSA",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "91dd5dec-59ea-40e5-ad39-7f408e2babce",
+              "src": "/C:/Users/Madha/OneDrive/Desktop/transactions02.csv"
+            },
+            {
+              "key": "mapping",
+              "value": "{\n  \"transactionId\": \"transactionId\",\n  \"amount\": \"amount\",\n  \"referenceNumber\": \"referenceNumber\",\n  \"date\": \"date\"\n}\n",
+              "type": "text",
+              "uuid": "b75ca891-ceda-47ca-8af7-01f64037d938"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET jobs",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Nzg4OGFiNzUzODRmZTExZmQxY2RiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2OTYxODMyNSwiZXhwIjoxNzY5NzA0NzI1fQ.k0e1IZ3MGzEwP0l1F_2M7O_YsIMIkAlLHuPyc5N0MSA",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/jobs",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "jobs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "reconciliation results",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Nzg4OGFiNzUzODRmZTExZmQxY2RiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2OTYxODMyNSwiZXhwIjoxNzY5NzA0NzI1fQ.k0e1IZ3MGzEwP0l1F_2M7O_YsIMIkAlLHuPyc5N0MSA",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/results/6978c97319623525e0ab52f3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "results",
+            "6978c97319623525e0ab52f3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "audit trail",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Nzg4OGFiNzUzODRmZTExZmQxY2RiZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2OTYxODMyNSwiZXhwIjoxNzY5NzA0NzI1fQ.k0e1IZ3MGzEwP0l1F_2M7O_YsIMIkAlLHuPyc5N0MSA",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/audit/6979eeb56d8c3ae4fd4fb661",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "audit",
+            "6979eeb56d8c3ae4fd4fb661"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
